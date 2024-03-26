@@ -1,0 +1,15 @@
+server:
+  port: 8761
+
+spring:
+  application:
+    name: msvc-eureka
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    serverUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
